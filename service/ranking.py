@@ -5,7 +5,7 @@ redis = Redis(host='redis', port=6379, charset="utf-8", decode_responses=True)
 def find():
   global_ranking = redis.get('global_ranking')
   if global_ranking is None:
-    return 0
+    return '0'
   return global_ranking
 
 def getCurrentRanking(clicked):
